@@ -1,5 +1,9 @@
 # Information Theory Task
 
+## Requirements
+
+* C++14
+* Python3 (matplotlib, numpy)
 ## Task 2.1
 
 * n can be up to 64 as words are defined using the `uint64_t` datatype.
