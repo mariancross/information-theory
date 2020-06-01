@@ -38,8 +38,9 @@ def parse_output(stdout):
     return entropy, size
 
 
-def plot_data(data_, x_label, y_label, filename):
-    plt.plot(data_)
+def plot_data(x, y, x_label, y_label, filename):
+    plt.plot(x, y)
+    plt.xticks(x)
     plt.xlabel(x_label, fontsize='medium')
     plt.ylabel(y_label, fontsize='medium')
     plt.savefig(filename, bbox_inches='tight')
@@ -67,6 +68,6 @@ if __name__ == '__main__':
     entropy_l = np.array(entropy_l)
     size_l = np.array(size_l)
 
-    plot_data(entropy_l, 'n', 'Entropy', 'entropy.png')
-    plot_data(size_l, 'n', 'Compressed size', 'size.png')
+    plot_data(range(2, 20), entropy_l, 'n', 'Entropy', 'entropy.png')
+    plot_data(range(2, 20), size_l, 'n', 'Compressed size', 'size.png')
     exit()
