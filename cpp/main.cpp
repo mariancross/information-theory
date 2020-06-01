@@ -67,7 +67,7 @@ void computeShanonEntropy(string filename, int wordLen)
   long totalWords = length * 8 / wordLen;
   double entropy = 0;
 
-  cerr << "PMT: " << endl;
+  cerr << "PMF: " << endl;
 
   map<uint64_t, uint64_t>::iterator it = wordCount.begin();
   double probability = 0;
